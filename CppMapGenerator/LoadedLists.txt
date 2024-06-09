@@ -1,0 +1,208 @@
+Renderer.1 {
+    TextColor = rgb(190, 190, 190);
+    TextureBackground = None;
+
+    Scrollbar {
+        TextureArrowDown = "themes/Black.png" Part(0, 0, 20, 20) Middle(0, 1, 20, 19) Smooth;
+        TextureArrowDownHover = "themes/Black.png" Part(22, 0, 20, 20) Middle(0, 1, 20, 19) Smooth;
+        TextureArrowUp = "themes/Black.png" Part(44, 0, 20, 20) Middle(0, 0, 20, 19) Smooth;
+        TextureArrowUpHover = "themes/Black.png" Part(66, 0, 20, 20) Middle(0, 0, 20, 19) Smooth;
+        TextureThumb = "themes/Black.png" Part(68, 465, 20, 20) Smooth;
+        TextureThumbHover = "themes/Black.png" Part(90, 465, 20, 20) Smooth;
+        TextureTrack = "themes/Black.png" Part(0, 499, 20, 20) Smooth;
+        TextureTrackHover = "themes/Black.png" Part(22, 499, 20, 20) Smooth;
+    }
+}
+
+Renderer.2 {
+    TextColor = rgb(190, 190, 190);
+    TextColorHover = rgb(250, 250, 250);
+    TextureChecked = "themes/Black.png" Part(92, 389, 32, 32) Smooth;
+    TextureCheckedDisabled = None;
+    TextureCheckedFocused = "themes/Black.png" Part(0, 431, 32, 32) Smooth;
+    TextureCheckedHover = "themes/Black.png" Part(34, 431, 32, 32) Smooth;
+    TextureUnchecked = "themes/Black.png" Part(68, 431, 32, 32) Smooth;
+    TextureUncheckedDisabled = None;
+    TextureUncheckedFocused = "themes/Black.png" Part(0, 465, 32, 32) Smooth;
+    TextureUncheckedHover = "themes/Black.png" Part(34, 465, 32, 32) Smooth;
+}
+
+Panel.Panel1 {
+    Size = (100%, 100%);
+
+    Renderer {
+        BackgroundColor = rgba(180, 180, 180, 215);
+        TextureBackground = None;
+    }
+
+    ChildWindow.LoadedListsWindow {
+        Position = (12.5%, 12.5%);
+        Size = (75%, 75%);
+        Title = "Loaded Lists";
+        TitleAlignment = Center;
+        TitleButtons = Close;
+        TitleTextSize = 13;
+
+        Renderer {
+            BackgroundColor = rgb( 80, 80, 80);
+            BorderColor = Black;
+            Borders = (1, 1, 1, 1);
+            DistanceToSide = 5;
+            PaddingBetweenButtons = 2;
+            ShowTextOnTitleButtons = false;
+            TextureBackground = None;
+            TextureTitleBar = "themes/Black.png" Part(0, 580, 75, 25) Middle(25, 0) Smooth;
+            TitleColor = rgb(190, 190, 190);
+
+            MaximizeButton {
+                Texture = "themes/Black.png" Part(0, 330, 15, 15) Smooth;
+                TextureDown = "themes/Black.png" Part(17, 330, 15, 15) Smooth;
+                TextureHover = "themes/Black.png" Part(34, 330, 15, 15) Smooth;
+            }
+
+            MinimizeButton {
+                Texture = "themes/Black.png" Part(81, 330, 15, 15) Smooth;
+                TextureDown = "themes/Black.png" Part(98, 330, 15, 15) Smooth;
+                TextureHover = "themes/Black.png" Part(0, 347, 15, 15) Smooth;
+            }
+
+            CloseButton {
+                Texture = "themes/Black.png" Part(34, 212, 15, 15) Smooth;
+                TextureDown = "themes/Black.png" Part(51, 212, 15, 15) Smooth;
+                TextureHover = "themes/Black.png" Part(68, 212, 15, 15) Smooth;
+            }
+        }
+
+        ListBox.LoadedListsBox {
+            ItemHeight = 20;
+            MaximumItems = 0;
+            Position = (((parent.innersize - size) * 7) / 8, ((parent.innersize - size) * 2) / 8);
+            Size = (30%, 60%);
+            TextSize = 13;
+
+            Renderer {
+                BackgroundColorHover = rgb(100, 100, 100);
+                Padding = (3, 3, 3, 3);
+                SelectedBackgroundColor = rgb( 10, 110, 255);
+                SelectedBackgroundColorHover = rgb(30, 150, 255);
+                SelectedTextColor = White;
+                TextColor = rgb(190, 190, 190);
+                TextColorHover = rgb(250, 250, 250);
+                TextureBackground = "themes/Black.png" Part(0, 22, 48, 48) Middle(16) Smooth;
+
+                Scrollbar {
+                    TextureArrowDown = "themes/Black.png" Part(0, 0, 20, 20) Middle(0, 1, 20, 19) Smooth;
+                    TextureArrowDownHover = "themes/Black.png" Part(22, 0, 20, 20) Middle(0, 1, 20, 19) Smooth;
+                    TextureArrowUp = "themes/Black.png" Part(44, 0, 20, 20) Middle(0, 0, 20, 19) Smooth;
+                    TextureArrowUpHover = "themes/Black.png" Part(66, 0, 20, 20) Middle(0, 0, 20, 19) Smooth;
+                    TextureThumb = "themes/Black.png" Part(68, 465, 20, 20) Smooth;
+                    TextureThumbHover = "themes/Black.png" Part(90, 465, 20, 20) Smooth;
+                    TextureTrack = "themes/Black.png" Part(0, 499, 20, 20) Smooth;
+                    TextureTrackHover = "themes/Black.png" Part(22, 499, 20, 20) Smooth;
+                }
+            }
+        }
+
+        Button.RemoveButton {
+            Position = ((parent.innersize - size) / 8, ((parent.innersize - size) * 4) / 8);
+            Text = Remove;
+            TextSize = 13;
+
+            Renderer {
+                TextColor = rgb(190, 190, 190);
+                TextColorHover = rgb(250, 250, 250);
+                Texture = "themes/Black.png" Part(50, 22, 45, 50) Middle(10, 0) Smooth;
+                TextureDisabled = None;
+                TextureDown = "themes/Black.png" Part(0, 74, 45, 50) Middle(10, 0) Smooth;
+                TextureDownFocused = None;
+                TextureDownHover = None;
+                TextureFocused = "themes/Black.png" Part(47, 74, 45, 50) Middle(10, 0) Smooth;
+                TextureHover = "themes/Black.png" Part(0, 126, 45, 50) Middle(10, 0) Smooth;
+            }
+        }
+
+        Picture.Picture {
+            Position = ((parent.innersize - size) / 8, ((parent.innersize - size) * 7) / 8);
+            Size = (100, 100);
+
+            Renderer {
+                Texture = None;
+            }
+        }
+
+        Label.ItemListLabel {
+            AutoSize = true;
+            Position = (((parent.innersize - size) * 3) / 16, ((parent.innersize - size) * 1) / 8);
+            Size = (58.2, 18);
+            Text = "Item List";
+            TextSize = 13;
+
+            Renderer {
+                TextColor = rgb(190, 190, 190);
+                TextureBackground = None;
+
+                Scrollbar {
+                    TextureArrowDown = "themes/Black.png" Part(0, 0, 20, 20) Middle(0, 1, 20, 19) Smooth;
+                    TextureArrowDownHover = "themes/Black.png" Part(22, 0, 20, 20) Middle(0, 1, 20, 19) Smooth;
+                    TextureArrowUp = "themes/Black.png" Part(44, 0, 20, 20) Middle(0, 0, 20, 19) Smooth;
+                    TextureArrowUpHover = "themes/Black.png" Part(66, 0, 20, 20) Middle(0, 0, 20, 19) Smooth;
+                    TextureThumb = "themes/Black.png" Part(68, 465, 20, 20) Smooth;
+                    TextureThumbHover = "themes/Black.png" Part(90, 465, 20, 20) Smooth;
+                    TextureTrack = "themes/Black.png" Part(0, 499, 20, 20) Smooth;
+                    TextureTrackHover = "themes/Black.png" Part(22, 499, 20, 20) Smooth;
+                }
+            }
+        }
+
+        RadioButton.ItemListRadioButton {
+            Position = ((parent.innersize - size) / 8, ((parent.innersize - size) * 1) / 8);
+            Size = (18, 18);
+            TextSize = 13;
+
+            Renderer {
+                TextColor = rgb(190, 190, 190);
+                TextColorHover = rgb(250, 250, 250);
+                TextureChecked = "themes/Black.png" Part(92, 389, 32, 32) Smooth;
+                TextureCheckedDisabled = None;
+                TextureCheckedFocused = "themes/Black.png" Part(0, 431, 32, 32) Smooth;
+                TextureCheckedHover = "themes/Black.png" Part(34, 431, 32, 32) Smooth;
+                TextureUnchecked = "themes/Black.png" Part(68, 431, 32, 32) Smooth;
+                TextureUncheckedDisabled = None;
+                TextureUncheckedFocused = "themes/Black.png" Part(0, 465, 32, 32) Smooth;
+                TextureUncheckedHover = "themes/Black.png" Part(34, 465, 32, 32) Smooth;
+            }
+        }
+
+        Label.MonsterListLabel {
+            AutoSize = true;
+            Position = (((parent.innersize - size) * 3) / 16, ((parent.innersize - size) * 2) / 8);
+            Renderer = &1;
+            Size = (80.2, 18);
+            Text = "Monster List";
+            TextSize = 13;
+        }
+
+        Label.TileListLabel {
+            AutoSize = true;
+            Position = (((parent.innersize - size) * 3) / 16, ((parent.innersize - size) * 3) / 8);
+            Renderer = &1;
+            Size = (51.2, 18);
+            Text = "Tile List";
+            TextSize = 13;
+        }
+
+        RadioButton.MonsterListRadioButton {
+            Position = ((parent.innersize - size) / 8, ((parent.innersize - size) * 2) / 8);
+            Renderer = &2;
+            Size = (18, 18);
+            TextSize = 13;
+        }
+
+        RadioButton.TileListRadioButton {
+            Position = ((parent.innersize - size) / 8, ((parent.innersize - size) * 3) / 8);
+            Renderer = &2;
+            Size = (18, 18);
+            TextSize = 13;
+        }
+    }
+}

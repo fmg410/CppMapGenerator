@@ -1,0 +1,76 @@
+Renderer.1 {
+    TextColor = rgb(190, 190, 190);
+    TextColorHover = rgb(250, 250, 250);
+    Texture = "themes/Black.png" Part(50, 22, 45, 50) Middle(10, 0) Smooth;
+    TextureDisabled = None;
+    TextureDown = "themes/Black.png" Part(0, 74, 45, 50) Middle(10, 0) Smooth;
+    TextureDownFocused = None;
+    TextureDownHover = None;
+    TextureFocused = "themes/Black.png" Part(47, 74, 45, 50) Middle(10, 0) Smooth;
+    TextureHover = "themes/Black.png" Part(0, 126, 45, 50) Middle(10, 0) Smooth;
+}
+
+Panel.Panel1 {
+    Size = (15%, 100%);
+
+    Renderer {
+        BackgroundColor = rgb(80, 80, 80);
+        TextureBackground = None;
+    }
+
+    Button.GenerateMapButton {
+        Position = ((parent.innersize - size) / 2, ((parent.innersize - size) * 1) / 9);
+        Renderer = &1;
+        Text = "Generate Map";
+        TextSize = 13;
+    }
+
+    Button.SaveMapButton {
+        Position = ((parent.innersize - size) / 2, ((parent.innersize - size) * 2) / 9);
+        Renderer = &1;
+        Text = "Save Map";
+        TextSize = 13;
+    }
+
+    Button.LoadMapButton {
+        Position = ((parent.innersize - size) / 2, ((parent.innersize - size) * 3) / 9);
+        Renderer = &1;
+        Text = "Load Map";
+        TextSize = 13;
+    }
+
+    Button.SaveMapAsImageButton {
+        Position = ((parent.innersize - size) / 2, ((parent.innersize - size) * 4) / 9);
+        Renderer = &1;
+        Text = "Save Map As Image";
+        TextSize = 10;
+    }
+
+    Button.LoadedListsButton {
+        Position = ((parent.innersize - size) / 2, ((parent.innersize - size) * 6) / 9);
+        Renderer = &1;
+        Text = "Loaded Lists";
+        TextSize = 13;
+    }
+
+    Button.ConfigButton {
+        Position = ((parent.innersize - size) / 2, ((parent.innersize - size) * 7) / 9);
+        Renderer = &1;
+        Text = Config;
+        TextSize = 13;
+    }
+
+    Button.ExitButton {
+        Position = ((parent.innersize - size) / 2, ((parent.innersize - size) * 8) / 9);
+        Renderer = &1;
+        Text = Exit;
+        TextSize = 13;
+    }
+
+    Button.TileInfoButton {
+        Position = ((parent.innersize - size) / 2, ((parent.innersize - size) * 5) / 9);
+        Renderer = &1;
+        Text = "Tile Info";
+        TextSize = 13;
+    }
+}

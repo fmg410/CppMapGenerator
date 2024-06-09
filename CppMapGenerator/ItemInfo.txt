@@ -1,0 +1,106 @@
+Panel.Panel1 {
+    Size = (100%, 100%);
+
+    Renderer {
+        BackgroundColor = rgba(180, 180, 180, 215);
+        TextureBackground = None;
+    }
+
+    ChildWindow.ItemInfoWindow {
+        Position = (12.5%, 12.5%);
+        Size = (75%, 75%);
+        Title = "Item Info";
+        TitleAlignment = Center;
+        TitleButtons = Close;
+        TitleTextSize = 13;
+
+        Renderer {
+            BackgroundColor = rgb( 80, 80, 80);
+            BorderColor = Black;
+            Borders = (1, 1, 1, 1);
+            DistanceToSide = 5;
+            PaddingBetweenButtons = 2;
+            ShowTextOnTitleButtons = false;
+            TextureBackground = None;
+            TextureTitleBar = "themes/Black.png" Part(0, 580, 75, 25) Middle(25, 0) Smooth;
+            TitleColor = rgb(190, 190, 190);
+
+            MaximizeButton {
+                Texture = "themes/Black.png" Part(0, 330, 15, 15) Smooth;
+                TextureDown = "themes/Black.png" Part(17, 330, 15, 15) Smooth;
+                TextureHover = "themes/Black.png" Part(34, 330, 15, 15) Smooth;
+            }
+
+            MinimizeButton {
+                Texture = "themes/Black.png" Part(81, 330, 15, 15) Smooth;
+                TextureDown = "themes/Black.png" Part(98, 330, 15, 15) Smooth;
+                TextureHover = "themes/Black.png" Part(0, 347, 15, 15) Smooth;
+            }
+
+            CloseButton {
+                Texture = "themes/Black.png" Part(34, 212, 15, 15) Smooth;
+                TextureDown = "themes/Black.png" Part(51, 212, 15, 15) Smooth;
+                TextureHover = "themes/Black.png" Part(68, 212, 15, 15) Smooth;
+            }
+        }
+
+        TextArea.DescriptionTextArea {
+            HorizontalScrollbarPolicy = Never;
+            MaximumCharacters = 0;
+            Position = ((parent.innersize - size) / 2, ((parent.innersize - size) * 4) / 6);
+            ReadOnly = true;
+            Size = (60%, 50%);
+            Text = "";
+            TextSize = 13;
+
+            Renderer {
+                CaretColor = rgb(110, 110, 255);
+                Padding = (3, 3, 3, 3);
+                SelectedTextBackgroundColor = rgb( 10, 110, 255);
+                SelectedTextColor = White;
+                TextColor = rgb(190, 190, 190);
+                TextureBackground = "themes/Black.png" Part(0, 22, 48, 48) Middle(16) Smooth;
+
+                Scrollbar {
+                    TextureArrowDown = "themes/Black.png" Part(0, 0, 20, 20) Middle(0, 1, 20, 19) Smooth;
+                    TextureArrowDownHover = "themes/Black.png" Part(22, 0, 20, 20) Middle(0, 1, 20, 19) Smooth;
+                    TextureArrowUp = "themes/Black.png" Part(44, 0, 20, 20) Middle(0, 0, 20, 19) Smooth;
+                    TextureArrowUpHover = "themes/Black.png" Part(66, 0, 20, 20) Middle(0, 0, 20, 19) Smooth;
+                    TextureThumb = "themes/Black.png" Part(68, 465, 20, 20) Smooth;
+                    TextureThumbHover = "themes/Black.png" Part(90, 465, 20, 20) Smooth;
+                    TextureTrack = "themes/Black.png" Part(0, 499, 20, 20) Smooth;
+                    TextureTrackHover = "themes/Black.png" Part(22, 499, 20, 20) Smooth;
+                }
+            }
+        }
+
+        EditBox.NameEditBox {
+            Position = (((parent.innersize - size) * 4) / 6, ((parent.innersize - size) * 1) / 6);
+            ReadOnly = true;
+            Size = (160, 22);
+            TextSize = 13;
+
+            Renderer {
+                CaretColor = rgb(110, 110, 255);
+                DefaultTextColor = rgb(120, 120, 120);
+                Padding = (6, 4, 6, 4);
+                SelectedTextBackgroundColor = rgb( 10, 110, 255);
+                SelectedTextColor = White;
+                TextColor = rgb(190, 190, 190);
+                Texture = "themes/Black.png" Part(34, 246, 60, 40) Middle(15, 0) Smooth;
+                TextureDisabled = None;
+                TextureFocused = "themes/Black.png" Part(0, 288, 60, 40) Middle(15, 0) Smooth;
+                TextureHover = "themes/Black.png" Part(62, 288, 60, 40) Middle(15, 0) Smooth;
+            }
+        }
+
+        Picture.Picture {
+            Position = (((parent.innersize - size) * 2) / 8, ((parent.innersize - size) * 1) / 10);
+            Size = (100, 100);
+
+            Renderer {
+                Texture = None;
+            }
+        }
+    }
+}
